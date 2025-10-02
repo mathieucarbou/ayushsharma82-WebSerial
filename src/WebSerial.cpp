@@ -115,7 +115,7 @@ void WebSerialClass::onMessage(WSLStringMessageHandler callback) {
 }
 
 bool WebSerialClass::getConnectionCount() {
-  return _ws->count();
+  return _ws == nullptr ? 0 : _ws->count();
 }
 
 // Print func
